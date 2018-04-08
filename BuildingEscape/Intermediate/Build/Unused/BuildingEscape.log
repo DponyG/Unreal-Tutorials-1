@@ -1,0 +1,10 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Compiling game modules for hot reload
+  Performing 3 actions (9 in parallel)
+  OpenDoor.cpp
+  [2/3] Link UE4Editor-BuildingEscape-818.dll
+  [3/3] Link UE4Editor-BuildingEscape-818.lib
+     Creating library C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BuildingEscape-818.suppressed.lib and object C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BuildingEscape-818.suppressed.exp
+     Creating library C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BuildingEscape-818.lib and object C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BuildingEscape-818.exp
+  Deploying BuildingEscapeEditor Win64 Development...
+  Total build time: 3.42 seconds (Local executor: 1.63 seconds)
