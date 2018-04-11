@@ -16,15 +16,15 @@
 	},
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-BuildingEscape-4520.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-BuildingEscape-5358.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-BuildingEscape-4520.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-BuildingEscape-5358.pdb",
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BuildingEscape-4520.lib",
+			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BuildingEscape-5358.lib",
 			"Type": "ImportLibrary"
 		},
 		{
