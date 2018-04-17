@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ExcapeFromRoom2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{6E40A354-F232-41AF-8EF8-A69048409D46}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ExcapeFromRoom2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ExcapeFromRoom2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{33FDE2E1-3095-4F7B-A618-FA97313CFEE8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ExcapeFromRoom2">
+      <UniqueIdentifier>{F4EDCD30-CDD9-41DB-A370-939D624D6D59}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ExcapeFromRoom2\ExcapeFromRoom2.Build.cs">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ExcapeFromRoom2\ExcapeFromRoom2.cpp">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ExcapeFromRoom2\ExcapeFromRoom2.h">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ExcapeFromRoom2\ExcapeFromRoom2GameModeBase.cpp">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ExcapeFromRoom2\ExcapeFromRoom2GameModeBase.h">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\ExcapeFromRoom2\OpenDoor.h">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ExcapeFromRoom2\DoorOpen.h">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ExcapeFromRoom2\Grabber.h">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\ExcapeFromRoom2\OpenDoor.cpp">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExcapeFromRoom2\DoorOpen.cpp">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExcapeFromRoom2\Grabber.cpp">
+      <Filter>Source\ExcapeFromRoom2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

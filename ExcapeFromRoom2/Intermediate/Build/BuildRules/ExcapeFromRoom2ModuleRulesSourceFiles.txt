@@ -1,0 +1,3 @@
+C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Source\ExcapeFromRoom2\ExcapeFromRoom2.Build.cs
+C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Source\ExcapeFromRoom2.Target.cs
+C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Source\ExcapeFromRoom2Editor.Target.cs

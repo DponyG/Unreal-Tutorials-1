@@ -4,6 +4,7 @@
 #include "Engine/World.h"
 #include "Runtime/Engine/Public/DrawDebugHelpers.h"
 #include "GameFramework/Controller.h"
+#include <CollisionQueryParams.h>
 
 
 
@@ -25,6 +26,24 @@ void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
+	///Look for attached Physics Handle
+	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	InputHandle = GetOwner()->FindComponentByClass<UInputComponent>();
+	if (PhysicsHandle) {
+		//Physics handle is found
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Could not find: %s"), *GetOwner()->GetName());
+	}
+
+	if (InputHandle) {
+		//Physics handle is found
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Could not find InputHandle: %s"), *GetOwner()->GetName());
+	}
+
+
 	// ...
 	
 }
@@ -44,29 +63,28 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	
 	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector()* Reach;
 
-	DrawDebugLine(
-		GetWorld(),
+
+	// Set query parameters
+	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
+
+	/// Line Trace (aka ray-cast) out to each distance
+	FHitResult Hit;
+	GetWorld()->LineTraceSingleByObjectType(
+
+		OUT Hit,
 		PlayerViewPointLocation,
 		LineTraceEnd,
-		FColor(255, 0, 0),
-		false,
-		0.f,
-		0.f,
-		10.f
-		);
+		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
+		TraceParameters
+
+	);
+
+	
+	AActor * ActorHit = Hit.GetActor();
+	if (ActorHit) {
+		UE_LOG(LogTemp, Warning, TEXT("Hit: %s"), *(ActorHit->GetName()));
+	}
 
 
-	/*UE_LOG(LogTemp, Warning, TEXT("Location: %s, Position: %s"),
-		*PlayerViewPointLocation.ToString(), 
-		*PlayerViewPointRotation.ToString());*/
-
-	//TODO Log out to test
-	// Get player View point this tick
-
-	// Ray-Cast out to reach distance
-
-	// See what we hit
-
-	// ...
 }
 
