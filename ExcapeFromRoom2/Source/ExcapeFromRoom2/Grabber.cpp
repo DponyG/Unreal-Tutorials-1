@@ -27,9 +27,18 @@ void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
+	FindPhysicsComponent();
+	SetupInputComponent();
+
+
+	// ...
+
+}
+
+void UGrabber::FindPhysicsComponent() {
 	///Look for attached Physics Handle
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
-	InputHandle = GetOwner()->FindComponentByClass<UInputComponent>();
+	
 	if (PhysicsHandle) {
 		//Physics handle is found
 	}
@@ -37,29 +46,38 @@ void UGrabber::BeginPlay()
 		UE_LOG(LogTemp, Error, TEXT("Could not find: %s"), *GetOwner()->GetName());
 	}
 
+	
+}
+
+void UGrabber::SetupInputComponent() {
+	InputHandle = GetOwner()->FindComponentByClass<UInputComponent>();
 	if (InputHandle) {
 		//Bind the input axis.
 		InputHandle->BindAction("Grab", IE_Pressed, this, &UGrabber::Grab);
+		InputHandle->BindAction("Grab", IE_Released, this, &UGrabber::Released);
 	}
-		
+
 	else {
 		UE_LOG(LogTemp, Error, TEXT("Could not find InputHandle: %s"), *GetOwner()->GetName());
 	}
-
-
-	// ...
-
 }
 
 void UGrabber::Grab() {
 	UE_LOG(LogTemp, Warning, TEXT("Atempting to Grab"));
+	//Line Trace to reach any actors with physics body collision channel set
+	//If we hit something then attatch a physics handle.
+	FindPhysicsBodyInReach();
 }
 
+void UGrabber::Released() {
+	UE_LOG(LogTemp, Warning, TEXT("Atempting to release"));
+	//Todo released physics
+}
 
-// Called every frame
-void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+const FHitResult UGrabber::FindPhysicsBodyInReach()
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	//if physics handle is attatched move whats holding.
+
 	FVector PlayerViewPointLocation;
 	FRotator PlayerViewPointRotation;
 
@@ -92,6 +110,12 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		UE_LOG(LogTemp, Warning, TEXT("Hit: %s"), *(ActorHit->GetName()));
 	}
 
-	
+	return FHitResult();
+}
+
+// Called every frame
+void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 }
