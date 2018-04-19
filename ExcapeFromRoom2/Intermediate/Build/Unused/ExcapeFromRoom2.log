@@ -1,5 +1,10 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
   Compiling game modules for hot reload
-  Target is up to date
+  Performing 3 actions (9 in parallel)
+  OpenDoor.cpp
+  [2/3] Link UE4Editor-ExcapeFromRoom2-1317.dll
+  [3/3] Link UE4Editor-ExcapeFromRoom2-1317.lib
+     Creating library C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ExcapeFromRoom2-1317.lib and object C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ExcapeFromRoom2-1317.exp
+     Creating library C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ExcapeFromRoom2-1317.suppressed.lib and object C:\Users\dpony\Documents\Unreal Projects\Unreal-Tutorials-1\ExcapeFromRoom2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ExcapeFromRoom2-1317.suppressed.exp
   Deploying ExcapeFromRoom2Editor Win64 Development...
-  Total build time: 1.42 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 2.72 seconds (Local executor: 1.32 seconds)

@@ -41,6 +41,11 @@ private:
 	//Find the attatched input handle
 	void SetupInputComponent();
 
+	//Returns the end of the Reach
+	FVector GetReachLineEnd();
+
+	FVector GetReachLineStart();
+
 	//Return hit for first physics body in reach
 	const FHitResult FindPhysicsBodyInReach();
 
